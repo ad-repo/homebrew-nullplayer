@@ -4,7 +4,7 @@ cask "nullplayer" do
 
   url "https://github.com/ad-repo/nullplayer/releases/download/#{version}/NullPlayer-#{version}.dmg"
   name "NullPlayer"
-  desc "Free open source macOS media player"
+  desc "Free open source media player with first-class headless CLI"
   homepage "https://github.com/ad-repo/nullplayer"
 
   livecheck do
@@ -12,7 +12,7 @@ cask "nullplayer" do
     strategy :github_latest
   end
 
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "NullPlayer.app"
 
@@ -26,8 +26,8 @@ cask "nullplayer" do
 
   zap trash: [
     "~/Library/Application Support/NullPlayer",
-    "~/Library/Preferences/com.nullplayer.app.plist",
     "~/Library/Caches/com.nullplayer.app",
+    "~/Library/Preferences/com.nullplayer.app.plist",
     "~/Library/Saved Application State/com.nullplayer.app.savedState",
   ]
 
