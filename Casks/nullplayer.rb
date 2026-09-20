@@ -18,10 +18,10 @@ cask "nullplayer" do
 
   # App is ad-hoc signed (not notarized). Strip quarantine so Gatekeeper
   # does not block first launch. Remove this block once notarization ships.
-  postflight do
-    system_command "/usr/bin/xattr",
-                   args: ["-cr", "#{appdir}/NullPlayer.app"],
-                   sudo: false
+  postflight_steps do
+    run "/usr/bin/xattr",
+        args: ["-cr", "{{appdir}}/NullPlayer.app"],
+        sudo: false
   end
 
   zap trash: [
