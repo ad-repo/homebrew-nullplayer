@@ -33,7 +33,7 @@ security delete-generic-password -s com.nullplayer.app
 
 ## Notes
 
-- NullPlayer is currently ad-hoc signed (no Apple Developer ID notarization yet). The cask runs `xattr -cr` in `postflight` so Gatekeeper does not block first launch. The `postflight` block will be removed once notarization ships in the upstream release pipeline.
+- NullPlayer is currently ad-hoc signed (no Apple Developer ID notarization yet). The cask runs `xattr -cr` in `postflight_steps` so Gatekeeper does not block first launch. The `postflight_steps` block will be removed once notarization ships in the upstream release pipeline.
 - `depends_on macos: ">= :sonoma"` matches the app's `LSMinimumSystemVersion = 14.0`.
 
 ## Issues
