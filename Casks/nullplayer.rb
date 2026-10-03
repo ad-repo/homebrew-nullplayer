@@ -1,6 +1,6 @@
 cask "nullplayer" do
-  version "0.31.2"
-  sha256 "8bfa28ae87ce1e42abb32e4a01e53a80363bea236af952c1898ec1c67a56cf41"
+  version "0.31.3"
+  sha256 "1415ae52bf68b9782edbc3b67c82c44e9a949d07cc9a4aca1d9f6c60caaa9f24"
 
   url "https://github.com/ad-repo/nullplayer/releases/download/#{version}/NullPlayer-#{version}.dmg"
   name "NullPlayer"
